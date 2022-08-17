@@ -232,4 +232,14 @@ return [
 
     ],
 
+     /*
+    |--------------------------------------------------------------------------
+    | IMDB API configuration
+    |--------------------------------------------------------------------------
+    |
+    */
+
+    'imdb_api_host' => env('IMDB_API_HOST', 'https://imdb-api.com/en' ),
+    'imdb_api_token' => env('IMDB_API_TOKEN', 'k_hx38t5tw')
+
 ];

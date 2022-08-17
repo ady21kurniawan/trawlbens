@@ -1,0 +1,66 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TRAWLBENS DOCUMENTATION",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/v1/candidate": {
+            "get": {
+                "tags": [
+                    "list candidate"
+                ],
+                "operationId": "c063e8bb9bb93e4b20742e07455994ff",
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of projects."
+                    }
+                }
+            }
+        },
+        "/api/v1/search_candidate": {
+            "post": {
+                "tags": [
+                    "search candidate"
+                ],
+                "operationId": "3bb93ccef0f634c629691b88dab602d3",
+                "parameters": [
+                    {
+                        "name": "keyword",
+                        "in": "query",
+                        "description": "search by name or email or phone",
+                        "required": true,
+                        "example": "vacant1@gmail.com"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of projects."
+                    }
+                }
+            }
+        },
+        "/api/v1/search_movie": {
+            "post": {
+                "tags": [
+                    "search movie"
+                ],
+                "operationId": "400b355e51eef3c3affdc83414a854f1",
+                "parameters": [
+                    {
+                        "name": "movie_title",
+                        "in": "query",
+                        "description": "search by movie title",
+                        "required": true,
+                        "example": "x-men"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display a listing of projects."
+                    }
+                }
+            }
+        }
+    }
+}

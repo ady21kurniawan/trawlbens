@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::group(['prefix'=>'v1/'], function(){
+    Route::get('candidate', [\App\Http\Controllers\CandidateController::class,"lists"]);
+    Route::post('search_candidate', [\App\Http\Controllers\CandidateController::class,"search"]);
+    Route::post('search_movie', [\App\Http\Controllers\MovieController::class,"search"]);
 });
