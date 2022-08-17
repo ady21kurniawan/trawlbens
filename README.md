@@ -3,3 +3,7 @@
 3. run php artisan db:seed
 4. run php artisan vendor:publish --provider "L5Swagger\L5SwaggerServiceProvider"
 6. run php artisan l5-swagger:generate
+
+
+#documentation
+path: {your-host}/api/documentation
